@@ -1,0 +1,11 @@
+{
+  "id": "CC0001",
+  "tipo": "Casa Condomínio",
+  "valor": "100000",
+  "bairro": "Centro",
+  "localidade": "Campo Grande",
+  "uf": "MS",
+  "quarto": "4",
+  "banheiro": "6",
+  "cozinha": "1"
+}

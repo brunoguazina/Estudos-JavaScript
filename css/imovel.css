@@ -1,0 +1,26 @@
+body {
+	font-family: Helvetica ,sans-serif;
+	font-size: 14px;
+
+	margin: 0;
+	padding: 0;
+}
+
+.conteudo{
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.imagemPrincipal{
+	width: 100%;
+}
+
+h1{
+	width: 100%;
+	position: relative;
+}
+
+.valorDoImovel{
+	position: absolute;
+	right: 0;
+}
