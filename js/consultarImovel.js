@@ -14,7 +14,11 @@ function tratarImagemPrincipal(idDoImovel) {
 }
 
 function tratarValorDoImovel(valorDoImovel) {
-	//TODO: tratar o valor do imovel
-	var valorDoImovelTratado = valorDoImovel;
-	$("#valor").html("R$ " + valorDoImovelTratado + ",00");
+	$("#valor").html(valorDoImovel + "00");
+	
+	$('#valor').priceFormat({
+    	prefix: 'R$ ',
+    	centsSeparator: ',',
+    	thousandsSeparator: '.'
+	});
 }
