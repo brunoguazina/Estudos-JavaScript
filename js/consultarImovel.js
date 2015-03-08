@@ -6,6 +6,7 @@ $.getJSON("imovel/0001.txt", function(dados) {
     $("#localidade").append(dados.localidade, " - " , dados.uf);
     tratarImagemPrincipal(dados.id);
     tratarValorDoImovel(dados.valor);
+    $("p", "#descricao").append(dados.descricao);
 	
 });
 

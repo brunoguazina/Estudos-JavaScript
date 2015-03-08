@@ -7,5 +7,6 @@
   "uf": "MS",
   "quarto": "4",
   "banheiro": "6",
-  "cozinha": "1"
+  "cozinha": "1",
+  "descricao": "Casa nova em condomínio de alto padrão, sala estar 02 ambientes, jantar, lavabo, jardim de inverno, 02 suítes, closet, hidro, 02 apto, cozinha Formaplas, despensa, área de serviço, 02 vagas, piscina aquecida e iluminada, churrasqueira, forno de pizza."
 }

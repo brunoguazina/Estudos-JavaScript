@@ -24,3 +24,15 @@ h1{
 	position: absolute;
 	right: 0;
 }
+
+#descricao{
+	margin: 25px 0;
+}
+
+#descricao h2{
+	margin: 0;
+}
+
+#descricao p{
+	margin: 5px 0;
+}
