@@ -1,33 +1,29 @@
 
 
+
+
 $("#salvar").on("click", function() {
 
-	var nomeDaPersona = $("#nome").val();
-	var idadeDaPersona = $("#idade").val();
-	var profissaoDaPersona = $("#profissao").val();
-	
 	var objeto = {
-		nome: nomeDaPersona,
-		idade: idadeDaPersona,
-		profissao: profissaoDaPersona,
+		nome: $("#nome").val(),
+		idade: $("#idade").val(),
+		profissao: $("#profissao").val(),
 	};
 
-	salvar(objeto, nomeDaPersona);
+	salvar(objeto);
 
 });
 
-
-function salvar(cliente, nomeDaPersona) {
-	
-	localStorage.setItem( nomeDaPersona ,JSON.stringify(cliente));
-	listar(nomeDaPersona);	
+function salvar(pessoa) {
+	var pessoas = JSON.parse(localStorage.getItem("Pessoas"));
+	pessoas.push(pessoa);
+	localStorage.setItem( "Pessoas" ,JSON.stringify(pessoas));
+	listar(pessoas);
 }
 
-function listar(nome) {
-
-	var persona = JSON.parse(localStorage.getItem(nome));
-	$(".nome").empty().append(persona.nome);
-	$(".idade").empty().append(persona.idade);
-	$(".profissao").empty().append(persona.profissao);
-
+function listar(key) {
+	console.log(key);
 }
+
+
+
