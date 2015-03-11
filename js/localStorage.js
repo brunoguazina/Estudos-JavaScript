@@ -1,6 +1,7 @@
 
-
-
+if (localStorage.getItem("Pessoas") == null) {
+		localStorage.setItem( "Pessoas" ,JSON.stringify([]));
+}
 
 $("#salvar").on("click", function() {
 
@@ -14,15 +15,17 @@ $("#salvar").on("click", function() {
 
 });
 
-function salvar(pessoa) {
+
+function salvar(pessoa, nome) {
 	var pessoas = JSON.parse(localStorage.getItem("Pessoas"));
 	pessoas.push(pessoa);
 	localStorage.setItem( "Pessoas" ,JSON.stringify(pessoas));
-	listar(pessoas);
+	listar();
 }
 
-function listar(key) {
-	console.log(key);
+
+function listar() {
+	console.log(localStorage.getItem("Pessoas"));
 }
 
 
