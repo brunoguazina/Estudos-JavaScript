@@ -22,16 +22,18 @@ function salvar(pessoa, nome) {
 	var pessoas = JSON.parse(localStorage.getItem("Pessoas"));
 	pessoas.push(pessoa);
 	localStorage.setItem( "Pessoas" ,JSON.stringify(pessoas));
-	listar();
 }
 
 
 function listar() {
-	console.log(localStorage.getItem("Pessoas"));
 	
-	JSON.parse(localStorage.getItem("Pessoas"), function(string, valor) {
-		console.log(string + ": " + valor);
-	});
+	var obj = JSON.parse(localStorage.getItem("Pessoas"));
+    
+	obj.forEach(function(item){
+    	console.log("nome:" + item.nome);
+    	console.log("idade:" + item.idade);
+  	});
+
 }
 
 
