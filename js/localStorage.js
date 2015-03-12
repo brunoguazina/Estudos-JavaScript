@@ -5,6 +5,7 @@ if (localStorage.getItem("Pessoas") == null) {
 }
 
 
+
 $("#salvar").on("click", function() {
 
 	var objeto = {
@@ -18,25 +19,22 @@ $("#salvar").on("click", function() {
 });
 
 
-function salvar(pessoa, nome) {
+function salvar(pessoa) {
 	var pessoas = JSON.parse(localStorage.getItem("Pessoas"));
 	pessoas.push(pessoa);
 	localStorage.setItem( "Pessoas" ,JSON.stringify(pessoas));
+	listar(pessoas);
 }
 
 
-function listar() {
+function listar(pessoas) {
 	
-	var obj = JSON.parse(localStorage.getItem("Pessoas"));
-    
-	obj.forEach(function(item){
-    	console.log("nome:" + item.nome);
-    	console.log("idade:" + item.idade);
+	pessoas.forEach(function(pessoa) {
+    	
+    	$("#listaDePessoas").append("<li>" + "Nome: " + pessoa.nome + "</li>");
+
   	});
 
 }
-
-
-
 
 
