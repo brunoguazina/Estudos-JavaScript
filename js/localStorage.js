@@ -1,7 +1,9 @@
 
+
 if (localStorage.getItem("Pessoas") == null) {
 		localStorage.setItem( "Pessoas" ,JSON.stringify([]));
 }
+
 
 $("#salvar").on("click", function() {
 
@@ -26,7 +28,13 @@ function salvar(pessoa, nome) {
 
 function listar() {
 	console.log(localStorage.getItem("Pessoas"));
+	
+	JSON.parse(localStorage.getItem("Pessoas"), function(string, valor) {
+		console.log(string + ": " + valor);
+	});
 }
+
+
 
 
 
