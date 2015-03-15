@@ -35,7 +35,9 @@ function salvar(pessoa) {
  
 
 function listar(pessoas) {
-	
+	if(pessoas == ""){
+		$("#listaDePessoas").append("<li> Você não possui pessoas cadastradas </li>");
+	}
 	pessoas.forEach(function(pessoa) {
     	$("#listaDePessoas").append("<li>" + "Nome: " + pessoa.nome + "</li>");
   	});
